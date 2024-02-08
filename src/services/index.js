@@ -47,6 +47,7 @@ module.exports.syncPackageService = require('./sync/package/package_sync.service
 module.exports.telegramBotService = require('./telegram/telegram_bot.service');
 module.exports.telegramService = require('./telegram/telegram.service');
 module.exports.tokenService = require('./token/token.service');
+module.exports.collectionService = require('./service_collection');
 
 
 

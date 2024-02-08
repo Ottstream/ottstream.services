@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
+    <style>
+      * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .ott {
+        width: 596px;
+        max-width: 100%;
+        min-height: 257px;
+        background-color: rgba(165, 170, 198, 0.2);
+        -webkit-print-color-adjust: exact;
+        margin: 0 auto;
+      }
+
+      .ott-head {
+        padding: 65px 20px 15px;
+      }
+
+      .ott-header-top {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+      }
+      .ott-header-logo img {
+        width: 141px;
+        height: 30px;
+      }
+      .ott-header-ifo {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+      .ott-header-info-item {
+        text-align: center;
+        padding: 0 10px;
+      }
+      .ott-header-info-item + .ott-header-info-item {
+        border-left: solid 1px #000;
+      }
+      .ott-header-info-item p {
+        font-size: 8px;
+        color: #164066;
+      }
+      .ott-head-address h3 {
+        font-size: 8px;
+        color: #164066;
+        margin: 0;
+      }
+      .ott-head-content {
+        margin-top: 30px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+      }
+      .ott-head-content-item h3 {
+        color: #164066;
+        font-size: 14px;
+        margin-bottom: 16px;
+      }
+      .ott-head-content-item-widget {
+        width: 270px;
+        height: 60px;
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 14px 12px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+      .ott-head-content-item-widget .bill p {
+        color: #164066;
+        font-size: 8px;
+        line-height: 12px;
+        margin: 0;
+      }
+      .ott-head-content-item-widget .invoice {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+      }
+      .ott-head-content-item-widget .invoice h4,
+      .ott-head-content-item-widget .invoice p {
+        color: #164066;
+        font-size: 8px;
+        line-height: 12px;
+        margin: 0;
+      }
+
+      /* // Ott table */
+      .ott-table {
+        background-color: #fff;
+        padding: 12px 20px;
+      }
+      .ott-table-title {
+        color: #164066;
+        font-size: 10px;
+        margin: 0;
+        padding-bottom: 12px;
+        border-bottom: 2px solid rgba(165, 170, 198, 0.5);
+      }
+      .ott-table-header {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 100%;
+        padding-left: 12px;
+        padding-top: 5px;
+      }
+      .ott-table-header .item {
+        font-size: 8px;
+        color: #164066;
+        font-weight: 600;
+      }
+      .ott-table-login {
+        width: 100%;
+        background-color: rgba(165, 170, 198, 0.2);
+        color: #164066;
+        font-size: 8px;
+        padding: 6px 12px;
+        margin-top: 4px;
+      }
+      .list-item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 100%;
+        padding: 5px 0 5px 12px;
+        border-bottom: 2px solid rgba(165, 170, 198, 0.5);
+      }
+      .list-item .item {
+        color: #164066;
+        font-size: 8px;
+      }
+      .list-item .item span {
+        color: #9da8bb;
+      }
+      .ott-table-total {
+        width: 142px;
+        margin-left: auto;
+        margin-top: 10px;
+        margin-right: 34px;
+      }
+      .ott-table-total .item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        font-size: 8px;
+        color: #164066;
+        margin: 6px 0;
+      }
+      .ott-table-total .item p {
+        min-width: 15px;
+        text-align: start;
+        margin: 0;
+      }
+      .pt-0 {
+        padding-top: 0;
+      }
+      .border {
+        border-bottom: 2px solid rgba(165, 170, 198, 0.5);
+      }
+      .pb-6 {
+        padding-bottom: 6px;
+      }
+      .w-100 {
+        width: 100%;
+      }
+      .flex-end {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ott">
+      <div class="ott-head">
+        <div class="ott-header-top">
+          <div class="ott-header-logo">
+            <img src="http://placehold.jp/141x30.png" alt="logo" />
+          </div>
+          <div class="ott-header-ifo">
+            <div class="ott-header-info-item">
+              <div class="item-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="6.988" height="9.983" viewBox="294 65 6.988 9.983">
+                  <path
+                    d="M297.494 67.246a1.248 1.248 0 1 1 0 2.496 1.248 1.248 0 0 1 0-2.496m0-2.246a3.494 3.494 0 0 1 3.494 3.494c0 2.62-3.494 6.489-3.494 6.489S294 71.115 294 68.494A3.494 3.494 0 0 1 297.494 65m0 .998a2.496 2.496 0 0 0-2.496 2.496c0 .5 0 1.498 2.496 4.847 2.496-3.35 2.496-4.348 2.496-4.847a2.496 2.496 0 0 0-2.496-2.496Z"
+                    fill="#164066"
+                    fill-rule="evenodd"
+                    data-name="map-marker-outline"
+                  />
+                </svg>
+              </div>
+              <p class="item-text">Mon - Sun 24/7</p>
+            </div>
+            <div class="ott-header-info-item">
+              <div class="item-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12.479" height="9.983" viewBox="379 65 12.479 9.983">
+                  <path
+                    d="M391.479 66.248c0-.686-.562-1.248-1.248-1.248h-9.983c-.686 0-1.248.562-1.248 1.248v7.487c0 .686.562 1.248 1.248 1.248h9.983c.686 0 1.248-.562 1.248-1.248v-7.487m-1.248 0-4.992 3.12-4.991-3.12h9.983m0 7.487h-9.983v-6.24l4.991 3.12 4.992-3.12v6.24Z"
+                    fill="#164066"
+                    fill-rule="evenodd"
+                    data-name="email-outline"
+                  />
+                </svg>
+              </div>
+              <p class="item-text">your.mail@gmail.com</p>
+            </div>
+            <div class="ott-header-info-item">
+              <div class="item-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="9.983" height="9.983" viewBox="471 65 9.983 9.983">
+                  <path
+                    d="M480.428 71.933c-.665 0-1.386-.111-1.996-.333h-.167a.503.503 0 0 0-.388.166l-1.22 1.22c-1.553-.831-2.884-2.107-3.66-3.66l1.22-1.22c.166-.167.222-.388.11-.555a7.886 7.886 0 0 1-.277-1.996c0-.278-.277-.555-.554-.555h-1.941c-.278 0-.555.277-.555.555a9.42 9.42 0 0 0 9.428 9.428c.278 0 .555-.277.555-.555v-1.94c0-.278-.277-.555-.555-.555m-8.319-5.824h.832c.056.5.167.999.277 1.442l-.665.666a8.906 8.906 0 0 1-.444-2.108m7.765 7.765a8.906 8.906 0 0 1-2.108-.444l.666-.665c.444.11.943.221 1.442.221v.888Z"
+                    fill="#164066"
+                    fill-rule="evenodd"
+                    data-name="phone-outline (1)"
+                  />
+                </svg>
+              </div>
+              <p class="item-text">+1 844 407 0707</p>
+            </div>
+            <div class="ott-header-info-item">
+              <div class="item-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="9.983" height="9.983" viewBox="546 65 9.983 9.983">
+                  <path
+                    d="M553.168 70.99c.04-.33.07-.66.07-.998 0-.34-.03-.67-.07-.999h1.687c.08.32.13.654.13.999 0 .344-.05.678-.13.998m-2.57 2.775c.299-.554.528-1.153.688-1.777h1.473a4.008 4.008 0 0 1-2.162 1.777m-.124-2.775h-2.336c-.05-.33-.08-.66-.08-.998 0-.34.03-.674.08-.999h2.336c.044.325.08.66.08.999 0 .339-.036.668-.08.998m-1.168 2.975a6.77 6.77 0 0 1-.954-1.977h1.907a6.77 6.77 0 0 1-.953 1.977m-1.997-5.97h-1.458a3.955 3.955 0 0 1 2.157-1.777 8.603 8.603 0 0 0-.7 1.777m-1.457 3.993h1.458c.175.624.4 1.223.699 1.777a3.997 3.997 0 0 1-2.157-1.777m-.409-.998c-.08-.32-.13-.654-.13-.998 0-.345.05-.68.13-.999h1.687c-.04.33-.07.66-.07.999 0 .339.03.668.07.998m2.177-4.977c.414.6.748 1.268.953 1.982h-1.907c.205-.714.54-1.383.954-1.982m3.454 1.982h-1.473a7.811 7.811 0 0 0-.689-1.777 3.987 3.987 0 0 1 2.162 1.777M550.992 65a4.992 4.992 0 1 0 0 9.983 4.992 4.992 0 0 0 0-9.983Z"
+                    fill="#164066"
+                    fill-rule="evenodd"
+                    data-name="web"
+                  />
+                </svg>
+              </div>
+              <p class="item-text">Ottstream.inc</p>
+            </div>
+          </div>
+        </div>
+        <div class="ott-head-address">
+          <h3>
+            12506 Oxnard ST <br />
+            North Hollywood , CA 91606
+          </h3>
+        </div>
+        <div class="ott-head-content">
+          <div class="ott-head-content-item">
+            <h3>Bill to</h3>
+            <div class="ott-head-content-item-widget">
+              <div class="bill">
+                <p class="name">Armen Avakyan</p>
+                <p class="address">12434 Empire Pi</p>
+                <p class="location">Pocaima CA 91331 - 2041</p>
+              </div>
+            </div>
+          </div>
+          <div class="ott-head-content-item">
+            <h3>Invoice</h3>
+            <div class="ott-head-content-item-widget">
+              <div class="invoice">
+                <div class="item">
+                  <h4>invoice.</h4>
+                  <p>1981 - 852 - 638</p>
+                </div>
+                <div class="item invoice-date">
+                  <h4>Invoice Date.</h4>
+                  <p>09/10/19</p>
+                </div>
+                <div class="item total-due">
+                  <h4>Total Due</h4>
+                  <p>$30</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ott-table">
+        <h4 class="ott-table-title">Subscription</h4>
+        <div class="ott-table-header">
+          <div class="item" style="width: 60px">Action</div>
+          <div class="item" style="width: 58px">Action</div>
+          <div class="item" style="width: 74px">Start Date</div>
+          <div class="item" style="width: 95px">End Date</div>
+          <div class="item" style="width: 80px">Month/Days</div>
+          <div class="item" style="width: 64px">1M Price</div>
+          <div class="item" style="width: 64px">Discount</div>
+          <div class="item" style="width: 48px">Amount</div>
+        </div>
+        <div class="ott-table-login">Login : 11111 (home) Rooms - 2</div>
+        <div class="ott-table-body">
+          <div class="list-item">
+            <div class="item" style="width: 60px">Prolong</div>
+            <div class="item" style="width: 58px">Base</div>
+            <div class="item" style="width: 74px">09/29/2021</div>
+            <div class="item" style="width: 95px">11/30/2021<br /><span>(Was 10/31/2021)</span></div>
+            <div class="item" style="width: 80px">1m 0d</div>
+            <div class="item" style="width: 64px">$12</div>
+            <div class="item" style="width: 64px">0</div>
+            <div class="item" style="width: 48px">$12</div>
+          </div>
+          <div class="list-item">
+            <div class="item" style="width: 60px">Prolong</div>
+            <div class="item" style="width: 58px">Base</div>
+            <div class="item" style="width: 74px">09/29/2021</div>
+            <div class="item" style="width: 95px">11/30/2021<br /><span>(Was 10/31/2021)</span></div>
+            <div class="item" style="width: 80px">1m 0d</div>
+            <div class="item" style="width: 64px">$12</div>
+            <div class="item" style="width: 64px">0</div>
+            <div class="item" style="width: 48px">$12</div>
+          </div>
+          <div class="list-item">
+            <div class="item" style="width: 60px">Prolong</div>
+            <div class="item" style="width: 58px">Base</div>
+            <div class="item" style="width: 74px">09/29/2021</div>
+            <div class="item" style="width: 95px">11/30/2021<br /><span>(Was 10/31/2021)</span></div>
+            <div class="item" style="width: 80px">1m 0d</div>
+            <div class="item" style="width: 64px">$12</div>
+            <div class="item" style="width: 64px">0</div>
+            <div class="item" style="width: 48px">$12</div>
+          </div>
+          <div class="list-item">
+            <div class="item" style="width: 60px">Prolong</div>
+            <div class="item" style="width: 58px">Base</div>
+            <div class="item" style="width: 74px">09/29/2021</div>
+            <div class="item" style="width: 95px">11/30/2021<br /><span>(Was 10/31/2021)</span></div>
+            <div class="item" style="width: 80px">1m 0d</div>
+            <div class="item" style="width: 64px">$12</div>
+            <div class="item" style="width: 64px">0</div>
+            <div class="item" style="width: 48px">$12</div>
+          </div>
+        </div>
+        <div class="ott-table-total">
+          <div class="item">
+            <p>Subtotal</p>
+            <p>$30</p>
+          </div>
+          <div class="item">
+            <p>Tax</p>
+            <p>$10</p>
+          </div>
+        </div>
+      </div>
+      <div class="ott-table pt-0">
+        <h4 class="ott-table-title">Credit Balance</h4>
+        <div class="ott-table-header border pb-6">
+          <div class="item" style="width: 60px">Action</div>
+          <div class="item" style="width: 58px">Action</div>
+          <div class="item" style="width: 74px">Start Date</div>
+          <div class="item" style="width: 95px">End Date</div>
+          <div class="item" style="width: 80px">Month/Days</div>
+          <div class="item" style="width: 64px">1M Price</div>
+          <div class="item" style="width: 64px">Discount</div>
+          <div class="item" style="width: 48px">Amount</div>
+        </div>
+        <div class="ott-table-body">
+          <div class="list-item">
+            <div class="item" style="width: 60px">Prolong</div>
+            <div class="item" style="width: 58px">Base</div>
+            <div class="item" style="width: 74px">09/29/2021</div>
+            <div class="item" style="width: 95px">11/30/2021<br /><span>(Was 10/31/2021)</span></div>
+            <div class="item" style="width: 80px">1m 0d</div>
+            <div class="item" style="width: 64px">$12</div>
+            <div class="item" style="width: 64px">0</div>
+            <div class="item" style="width: 48px">$12</div>
+          </div>
+          <div class="list-item">
+            <div class="item" style="width: 60px">Prolong</div>
+            <div class="item" style="width: 58px">Base</div>
+            <div class="item" style="width: 74px">09/29/2021</div>
+            <div class="item" style="width: 95px">11/30/2021<br /><span>(Was 10/31/2021)</span></div>
+            <div class="item" style="width: 80px">1m 0d</div>
+            <div class="item" style="width: 64px">$12</div>
+            <div class="item" style="width: 64px">0</div>
+            <div class="item" style="width: 48px">$12</div>
+          </div>
+          <div class="list-item w-100 flex-end">
+            <div class="item" style="width: 128px">Credit Pay<br /><span>(Expire 10/31/2021)</span></div>
+            <div class="item" style="width: 48px">$30</div>
+          </div>
+        </div>
+        <div class="ott-table-total">
+          <div class="item" style="color: #01b2b8; font-weight: 700">
+            <p>Total/Subscription</p>
+            <p>$70</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

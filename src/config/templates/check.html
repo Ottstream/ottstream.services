@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Receipt Paper</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: calibri;
+            font-weight: bold;
+        }
+
+        
+        .d-flex-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            width: 40%;
+            display: flex;
+        }
+
+        .logo img {
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .py-1 {
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        .py-2 {
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+
+        .my-1 {
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+
+        .my-2 {
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+
+        .p-1 {
+            padding: 8px;
+        }
+
+        .p-2 {
+            padding: 16px;
+        }
+
+        .m-1 {
+            padding: 8px;
+        }
+
+        .m-2 {
+            margin: 16px;
+        }
+
+        .px-2 {
+            padding-left: 10px;
+            padding-right: 10px;
+
+        }
+
+        .ps-1 {
+            padding-left: 8px;
+        }
+
+        .pb-1 {
+            padding-bottom: 8px;
+        }
+
+        .pe-1 {
+            padding-right: 8px;
+        }
+
+        .pt-1 {
+            padding-top: 8px;
+        }
+
+        .ps-2 {
+            padding-left: 16px;
+        }
+
+        .pb-2 {
+            padding-bottom: 16px;
+        }
+
+        .pe-2 {
+            padding-right: 16px;
+        }
+
+        .pt-2 {
+            padding-top: 16px;
+        }
+
+        .ms-1 {
+            margin-left: 8px;
+        }
+
+        .mx-1 {
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+
+        .mb-0 {
+            margin-bottom: 0;
+        }
+
+        .mb-1 {
+            margin-bottom: 8px;
+        }
+
+        .me-1 {
+            margin-right: 8px;
+        }
+
+        .mt-1 {
+            margin-top: 8px;
+        }
+
+        .ms-2 {
+            margin-left: 16px;
+        }
+
+        .mb-2 {
+            margin-bottom: 16px;
+        }
+
+        .me-2 {
+            margin-right: 16px;
+        }
+
+        .ms-2 {
+            margin-left: 16px;
+        }
+
+        .mt-2 {
+            margin-top: 16px;
+        }
+
+        .border-bottom-solid {
+            border-bottom: 1.5px solid #d9d9d9;
+        }
+
+        .border-bottom-dashed {
+            border-bottom: 1.5px dashed #d9d9d9;
+        }
+
+        .border-right-solid {
+            border-right: 1.5px solid #d9d9d9;
+        }
+
+        .text-35 {
+            font-size: 35px;
+        }
+
+        .text-25 {
+            font-size: 25px;
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        table p {
+            margin-bottom: 8px;
+        }
+
+        table tr:last-child p {
+            margin-bottom: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table td {
+            vertical-align: text-top;
+        }
+
+        .grey-bg {
+            box-shadow: inset 0px 0px 35px #d9d9d9;
+        }
+
+        .d-block {
+            display: block;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .flex-column {
+            flex-direction: column;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .justify-start {
+            justify-content: flex-start;
+        }
+
+        .justify-end {
+            justify-content: flex-end;
+        }
+
+        .align-center {
+            align-items: center;
+        }
+
+
+        .account-infos-table tr td:nth-child(1) {
+            /* width: 80%; */
+            text-align: left;
+        }
+
+        .account-infos-table tr td:nth-child(2) {
+            width: 20%;
+            text-align: right;
+        }
+
+        .w-30 {
+            width: 30px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main px-2 mx-auto">
+        <!-- Logo part -->
+        <div class="d-flex-center flex-column logo-cont border-bottom-solid">
+            <div class="logo">
+                <img src="CH_logo">
+            </div>
+        </div>
+        
+        <!-- Information -->
+        <div class="border-bottom-solid pt-2">
+            <p class="mb-0">===================================================================</p>
+            <p class="mb-2 mt-1 text-35"><b>Information</b></p>
+            
+            <table class="text-25 mb-2">
+                <tr>
+                    <td><p>Address</p></td>
+                    <td>
+                        <p>CH_OTT_address CH_OTT_unit <br /> CH_OTT_city CH_OTT_province CH_OTT_zip</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>Phone</p></td>
+                    <td>
+                        <p>CH_phone</p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><p>Date</p></td>
+                    <td><p>CH_ORDER_date</p></td>
+                </tr>
+                <tr>
+                    <td><p>Time</p></td>
+                    <td><p>CH_ORDER_time</p></td>
+                </tr>
+                <tr>
+                    <td><p>Transaction Id</p></td>
+                    <td><p>CH_TRANSACTION_ID</p></td>
+                </tr>
+                <tr style="CH_MERCHANT_DISPLAY">
+                    <td><p>Merchant Id</p></td>
+                    <td><p>CH_MERCHANT_TRANSACTION_ID</p></td>
+                </tr>
+                <tr style="CH_INVOICE_DISPLAY">
+                    <td><p class="mb-0">Order Id</p></td>
+                    <td><p class="mb-0">CH_INVOICE_NUMBER</p></td>
+                </tr>
+            </table>
+
+            <p class="mb-0">===================================================================</p>
+        </div>
+        
+        <!-- Accounts -->
+        <p class="text-35 pb-2 pt-1" style="CH_ACCOUNTS_DISPLAY"><b>Accounts</b></p>
+        <div class="border-bottom-dashed">
+            CH_ACCOUNTS
+        </div>
+        <!-- Equipments -->
+        <p class="text-35 pb-2 pt-1" style="CH_EQUIPMENTS_DISPLAY"><b>Equipments</b></p>
+        <div class="border-bottom-dashed">
+            CH_EQUIPMENTS
+        </div>
+        <div>
+            <div class="border-bottom-dashed mt-1">
+                <table class="account-infos-table py-2 text-35">
+                    <!-- <tr>
+                        <td class="border-right-solid"><p><b>Tax</b></p></td>
+                        <td><p><b>$2</b></p></td>
+                    </tr> -->
+                    <tr style="CH_BANK_FEE_DISPLAY">
+                        <td class="border-right-solid"><p><b>Fee</b></p></td>
+                        <td><p><b>CH_PAY_BANK_FEE</b></p></td>
+                    </tr>
+                    <tr>
+                        <td class="border-right-solid"><p><b>Total</b></p></td>
+                        <td><p><b>CH_PAY_TOTAL_NO_FEE</b></p></td>
+                    </tr>
+                    <tr style="CH_PAY_BALANCE_DISPLAY">
+                        <td class="border-right-solid"><p><b>From Balance</b></p></td>
+                        <td><p><b>CH_PAY_BALANCE_TOTAL</b></p></td>
+                    </tr>
+                    <tr style="CH_PAY_CASH_DISPLAY">
+                        <td class="border-right-solid"><p><b>Pay Cash</b></p></td>
+                        <td><p><b>CH_PAY_CASH_TOTAL</b></p></td>
+                    </tr>
+                    <tr style="CH_PAY_CHECK_DISPLAY">
+                        <td class="border-right-solid"><p><b>Pay Check</b></p></td>
+                        <td><p><b>CH_PAY_CHECK_TOTAL</b></p></td>
+                    </tr>
+                    <tr style="CH_PAY_MO_DISPLAY">
+                        <td class="border-right-solid"><p><b>Pay Money Order</b></p></td>
+                        <td><p><b>CH_PAY_MO_TOTAL</b></p></td>
+                    </tr>
+                    <tr style="CH_PAY_BY_CARD_DISPLAY">
+                        <td class="border-right-solid">
+                            <p class="d-flex align-center flex-start">
+                                <b>Pay Card</b>
+                                <span>
+                                    CH_PAY_CARD_LOGO
+                                </span>
+                                <span class="text-25">CH_PAY_CARD_NUMBER</span>
+                            </p>
+                        </td>
+                        <td><p><b>CH_PAY_BY_CARD_TOTAL</b></p></td>
+                    </tr>
+                </table> 
+                <p class="mb-0 pt-2">===================================================================</p>
+            </div>
+        </div>
+
+        <p class="py-2 border-bottom-dashed text-center text-25">
+            Thank You For Using Our Service !
+            <span style="CH_DECLINE_DISPLAY"> (Declined)</span>
+            <span style="CH_REFUNDED_DISPLAY"> (Refunded)</span>
+            <p class="mb-0">===================================================================</p>
+        </p>
+    </div>
+
+</body>
+</html>

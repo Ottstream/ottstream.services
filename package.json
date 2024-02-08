@@ -1,0 +1,32 @@
+{
+  "name": "ottstream.service",
+  "version": "1.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://npm.ottstream.net/"
+  },
+  "dependencies": {
+    "@atech/postal": "^1.0.0",
+    "@maxmind/geoip2-node": "^5.0.0",
+    "bwip-js": "^4.2.0",
+    "node-thermal-printer": "^4.4.2",
+    "ottstream.services.config": "^1.0.4",
+    "pdf-merger-js": "^3.4.0",
+    "puppeteer": "^22.0.0",
+    "queue": "^6.0.2",
+    "twilio": "^4.21.0",
+    "uuidv4": "^6.2.13"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.9",
+    "@babel/node": "^7.23.9",
+    "@babel/preset-env": "^7.23.9"
+  }
+}
